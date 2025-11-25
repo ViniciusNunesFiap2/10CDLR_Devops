@@ -59,7 +59,7 @@ jobs:
 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_AUTOGLASS }}
 
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.qualitygate.wait=true -Dsonar.projectKey=devopsfiap_devopsimpacta        
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.qualitygate.wait=true -Dsonar.projectKey=viniciusnunesfiap2       
 
  
         path: target/site/jacoco
