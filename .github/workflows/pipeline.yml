@@ -30,8 +30,8 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build and analyze
         env:
-          GITHUB_TOKEN: ${{SONAR_TOKEN}}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{viniciusnunesfiap2}}
+          GITHUB_TOKEN: ${{ SONAR_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ viniciusnunesfiap2 }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.qualitygate.wait=true -Dsonar.projectKey=viniciusnunesfiap2      
 
   build: 
@@ -75,5 +75,5 @@ jobs:
       - name: Publish package
         run: mvn --batch-mode deploy
         env:
-          GITHUB_TOKEN: ${{SONAR_TOKEN}} 
+          GITHUB_TOKEN: ${{ SONAR_TOKEN }} 
  
